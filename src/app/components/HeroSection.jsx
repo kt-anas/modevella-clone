@@ -2,8 +2,10 @@
 
 
 
+import ImageMouseTrail from "../../uilayouts/mousetrail";
 import { storeConfig } from "../data/store";
 
+const images = storeConfig.social.posts.map(({ image }) => image);
 
 /**
  * Reusable HeroSection component.
@@ -23,11 +25,20 @@ export default function HeroSection({
 
     return (
         <section className="hero-section" aria-label="Hero Showcase">
-            <div className="hero-logo-wrapper">
-                <div className="hero-logo">
-                    <img src={assets.heroLogo} alt={brand} />
+            <ImageMouseTrail
+                items={images}
+                maxNumberOfImages={5}
+                distance={25}
+
+            >
+
+
+                <div className="hero-logo-wrapper">
+                    <div className="hero-logo">
+                        <img src={assets.heroLogo} alt={brand} />
+                    </div>
                 </div>
-            </div>
+            </ImageMouseTrail>
             <div className="hero-copy">
 
                 <div className="hero-copy-main">

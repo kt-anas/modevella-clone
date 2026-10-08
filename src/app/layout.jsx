@@ -1,3 +1,4 @@
+import "./tailwind.css";
 import "./globals.css";
 import { storeConfig } from "./data/store";
 import { CartProvider } from "./components/CartProvider";
